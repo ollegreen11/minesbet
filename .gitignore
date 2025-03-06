@@ -1,0 +1,25 @@
+# Node.js dependencies
+node_modules/
+
+# Build output directories
+/dist
+/build
+
+# Logs
+*.log
+
+# OS-specific files
+.DS_Store  # macOS specific
+Thumbs.db  # Windows specific
+
+# IDE/editor files
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Environment variables (do not track sensitive data)
+.env
+
+# Temporary files (e.g., swap files from text editors)
+*.swp
+
