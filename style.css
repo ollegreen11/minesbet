@@ -1,0 +1,178 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: linear-gradient(135deg, #1f1f1f, #121212);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .logo h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    color: #fff;
+}
+
+header .logo .mines {
+    color: #ffffff;
+}
+
+header .logo .bet {
+    color: #00e600;
+}
+
+header .actions button {
+    background-color: #00b894;
+    color: #fff;
+    font-size: 1.1em;
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin-left: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+header .actions button:hover {
+    background-color: #00e600;
+    transform: scale(1.05);
+}
+
+header .actions button:active {
+    background-color: #009e55;
+}
+
+/* Game Section */
+.game-container {
+    margin-top: 100px;
+    text-align: center;
+    padding: 40px;
+}
+
+.grid-container, .plinko-board {
+    display: grid;
+    grid-template-columns: repeat(5, 80px);
+    grid-gap: 10px;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.grid-item, .plinko-cell {
+    width: 80px;
+    height: 80px;
+    background-color: #333;
+    color: #fff;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.grid-item:hover, .plinko-cell:hover {
+    background-color: #444;
+}
+
+.grid-item.safe {
+    background-color: #28a745;
+}
+
+.grid-item.bomb {
+    background-color: #dc3545;
+}
+
+.plinko-cell {
+    background-color: #444;
+}
+
+.plinko-cell.active {
+    background-color: #00b894;
+}
+
+.towers-progress {
+    margin: 30px auto;
+    width: 80%;
+    height: 40px;
+    background-color: #333;
+    border-radius: 20px;
+    position: relative;
+}
+
+.towers-progress-bar {
+    height: 100%;
+    background-color: #28a745;
+    border-radius: 20px;
+}
+
+/* Button Styling */
+.game-btn {
+    background-color: #00b894;
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.game-btn:hover {
+    background-color: #00e600;
+}
+
+.game-btn:active {
+    background-color: #009e55;
+}
+
+/* Footer Section */
+footer {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header .logo h1 {
+        font-size: 2em;
+    }
+
+    .game-container {
+        margin-top: 120px;
+    }
+
+    footer {
+        font-size: 0.9em;
+    }
+}
+
