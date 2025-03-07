@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MinesBet - Robux Gambling</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1><span class="mines">Mines</span><span class="bet">Bet</span></h1>
+        </div>
+        <div class="play-btn">
+            <button id="playButton">Play</button>
+        </div>
+        <div class="login-signup">
+            <button id="loginSignupButton">Login / Signup</button>
+        </div>
+    </header>
+
+    <!-- Game Modes Modal -->
+    <div id="gameModesModal" class="modal">
+        <div class="modal-content">
+            <h2>Select a Game Mode</h2>
+            <ul>
+                <li><button class="game-mode" data-mode="Mines">Mines</button></li>
+                <li><button class="game-mode" data-mode="Crash">Crash</button></li>
+                <li><button class="game-mode" data-mode="Blackjack">Blackjack</button></li>
+                <li><button class="game-mode" data-mode="Plinko">Plinko</button></li>
+                <li><button class="game-mode" data-mode="Roll">Roll</button></li>
+                <li><button class="game-mode" data-mode="Case Battles">Case Battles</button></li>
+                <li><button class="game-mode" data-mode="Towers">Towers</button></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Wallet Section -->
+    <div id="wallet">
+        <div id="walletBalance">
+            <h3>Wallet Balance: <span id="balance">0</span> Robux</h3>
+        </div>
+        <button id="walletButton">Deposit / Withdraw</button>
+    </div>
+
+    <!-- Live Chat Section -->
+    <div id="liveChat">
+        <h4>Live Chat</h4>
+        <ul id="chatMessages">
+            <!-- Messages will appear here -->
+        </ul>
+    </div>
+
+    <!-- Money Rain Notification -->
+    <div id="moneyRain">
+        <span>💰 1000 Robux Money Rain! 💰</span>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 MinesBet - All rights reserved</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Open game modes modal
+        document.getElementById('playButton').addEventListener('click', () => {
+            document.getElementById('gameModesModal').style.display = 'flex';
+        });
+
+        // Close game modes modal when selecting a game mode
+        document.querySelectorAll('.game-mode').forEach(button => {
+            button.addEventListener('click', (e) => {
+                alert(`Starting game: ${e.target.dataset.mode}`);
+                document.getElementById('gameModesModal').style.display = 'none';
+            });
+        });
+
+        // Handle wallet actions (Deposit/Withdraw)
+        document.getElementById('walletButton').addEventListener('click', () => {
+            alert('Deposit / Withdraw modal triggered');
+        });
+
+        // Simulate live chat messages
+        setInterval(() => {
+            const chatMessages = document.getElementById('chatMessages');
+            const newMessage = document.createElement('li');
+            newMessage.textContent = `User123: Hey, I won big! 🎉`;
+            chatMessages.appendChild(newMessage);
+        }, 3000);
+
+        // Simulate money rain every 30 minutes
+        setInterval(() => {
+            document.getElementById('moneyRain').style.display = 'block';
+            setTimeout(() => {
+                document.getElementById('moneyRain').style.display = 'none';
+            }, 5000);
+        }, 1800000); // 30 minutes
+    </script>
+</body>
+</html>
+

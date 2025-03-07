@@ -1,0 +1,259 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+button {
+    padding: 12px 24px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: #218838;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #1f1f1f, #121212);
+    padding: 20px 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+header .logo h1 {
+    font-size: 2.4em;
+    letter-spacing: 2px;
+    color: white;
+}
+
+header .logo .mines {
+    color: #ffffff;
+}
+
+header .logo .bet {
+    color: #28a745;
+}
+
+header .play-btn, header .login-signup {
+    display: flex;
+    justify-content: center;
+}
+
+header button {
+    font-size: 1.2em;
+    background-color: #00b894;
+    padding: 10px 20px;
+}
+
+header button:hover {
+    background-color: #00b16a;
+}
+
+header button:active {
+    background-color: #009e55;
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content {
+    background: #1e1e1e;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.modal-content h2 {
+    font-size: 2.2em;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.modal-content button {
+    margin-top: 20px;
+    font-size: 1.2em;
+    background-color: #00e600;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    margin-top: 40px;
+    padding: 0 20px;
+}
+
+.game-tile {
+    width: 100%;
+    padding: 15px;
+    background-color: #333;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    position: relative;
+}
+
+.game-tile:hover {
+    background-color: #444;
+    transform: scale(1.05);
+}
+
+.game-tile img {
+    width: 50px;
+    height: 50px;
+}
+
+.game-tile.active {
+    background-color: #0f0;
+}
+
+/* Chat Section */
+#liveChat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    width: 280px;
+    height: 350px;
+    overflow-y: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#chatMessages {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#chatMessages li {
+    background-color: #444;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1em;
+}
+
+#chatMessages li:nth-child(odd) {
+    background-color: #555;
+}
+
+/* Money Rain Notification */
+#moneyRain {
+    position: fixed;
+    top: 15%;
+    right: 10%;
+    background-color: gold;
+    color: black;
+    font-size: 1.5em;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    display: none;
+    transform: translateX(50px);
+    animation: slideIn 5s ease-out infinite;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(50px);
+    }
+    50% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(50px);
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1em;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    header .logo h1 {
+        font-size: 2em;
+    }
+
+    .game-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #liveChat {
+        width: 240px;
+        height: 300px;
+    }
+
+    footer p {
+        font-size: 0.9em;
+    }
+}
+
+
