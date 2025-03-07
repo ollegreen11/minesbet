@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MinesBet - Robux Gambling</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1><span class="mines">Mines</span><span class="bet">Bet</span></h1>
+        </div>
+        <div class="play-btn">
+            <button id="playButton">Play</button>
+        </div>
+        <div class="login-signup">
+            <button id="loginSignupButton">Login / Signup</button>
+        </div>
+    </header>
+
+    <!-- Game Modes Modal (hidden initially) -->
+    <div id="gameModesModal" class="modal">
+        <div class="modal-content">
+            <h2>Select a Game Mode</h2>
+            <ul>
+                <li><button class="game-mode" data-mode="Mines">Mines</button></li>
+                <li><button class="game-mode" data-mode="Crash">Crash</button></li>
+                <li><button class="game-mode" data-mode="Blackjack">Blackjack</button></li>
+                <li><button class="game-mode" data-mode="Plinko">Plinko</button></li>
+                <li><button class="game-mode" data-mode="Roll">Roll</button></li>
+                <li><button class="game-mode" data-mode="Case Battles">Case Battles</button></li>
+                <li><button class="game-mode" data-mode="Towers">Towers</button></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Mines Game Modal (hidden initially) -->
+    <div id="minesGameModal" class="modal">
+        <div class="modal-content">
+            <h2>Mines Game</h2>
+            <p>Click on the tiles and try to avoid the bombs!</p>
+            <div id="minesGrid" class="game-grid">
+                <!-- Tiles will be populated here via JavaScript -->
+            </div>
+            <button id="closeMinesGame">Close Game</button>
+        </div>
+    </div>
+
+    <!-- Wallet Section -->
+    <section id="wallet">
+        <div id="walletBalance">
+            <h3>Your Wallet: <span id="robuxAmount">0</span> Robux</h3>
+        </div>
+        <button id="walletButton">Wallet</button>
+    </section>
+
+    <!-- Wallet Modal (Deposit, Withdraw, Redeem) -->
+    <div id="walletModal" class="modal">
+        <div class="modal-content">
+            <h2>Manage Wallet</h2>
+            <button id="depositButton">Deposit</button>
+            <button id="withdrawButton">Withdraw</button>
+            <button id="redeemButton">Redeem Promo</button>
+        </div>
+    </div>
+
+    <!-- Live Chat Section -->
+    <section id="liveChat">
+        <div id="chatWindow">
+            <h3>Live Chat</h3>
+            <ul id="chatMessages"></ul>
+        </div>
+    </section>
+
+    <!-- Money Rain Notification (hidden initially) -->
+    <div id="moneyRain" class="hidden">
+        <p>Money Rain! <span>1000 Robux</span> to be split between users!</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 MinesBet | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
+
