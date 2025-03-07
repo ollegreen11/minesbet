@@ -1,0 +1,229 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1c1c1c;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 10px 20px;
+}
+
+.header-left {
+    flex: 1;
+}
+
+.minesbet-logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.mines {
+    color: white;
+}
+
+.bet {
+    color: green;
+}
+
+.header-center {
+    flex: 2;
+    text-align: center;
+}
+
+.wallet-balance {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+.header-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.wallet-btn, .profile-btn, .settings-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.wallet-btn:hover, .profile-btn:hover, .settings-btn:hover {
+    background-color: #444;
+}
+
+/* Game Modal */
+.game-modes-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+.game-modes-modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+}
+
+.game-mode {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.game-mode:hover {
+    background-color: #555;
+}
+
+/* Close Modal Button */
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Game Section Styles */
+.game-section {
+    display: none;
+    text-align: center;
+    padding: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.grid-item {
+    width: 50px;
+    height: 50px;
+    background-color: #444;
+    border: 2px solid #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.grid-item:hover {
+    background-color: #555;
+}
+
+.bomb {
+    background-color: red !important;
+}
+
+.safe {
+    background-color: green !important;
+}
+
+/* Plinko Board */
+.plinko-board {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.plinko-cell {
+    width: 30px;
+    height: 30px;
+    background-color: #444;
+    border: 1px solid #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.plinko-cell:hover {
+    background-color: #555;
+}
+
+.plinko-ball {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 0%;
+    height: 30px;
+    background-color: green;
+    margin: 20px 0;
+    transition: width 0.5s ease;
+}
+
+/* Buttons */
+button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #444;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-left, .header-center, .header-right {
+        flex: none;
+        margin: 10px 0;
+    }
+
+    .game-modes-modal-content {
+        width: 250px;
+    }
+
+    .game-mode {
+        padding: 8px 15px;
+    }
+}
+
