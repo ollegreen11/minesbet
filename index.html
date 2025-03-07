@@ -1,0 +1,69 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MinesBet - Robux Gambling</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1><span class="mines">Mines</span><span class="bet">Bet</span></h1>
+        </div>
+        <div class="actions">
+            <button id="playButton" class="play-btn">Play</button>
+            <button id="loginSignupButton" class="login-btn">Login / Signup</button>
+        </div>
+    </header>
+
+    <!-- Game Modes Modal -->
+    <div id="gameModesModal" class="modal">
+        <div class="modal-content">
+            <h2>Select a Game Mode</h2>
+            <ul>
+                <li><button class="game-mode" data-mode="Mines">Mines</button></li>
+                <li><button class="game-mode" data-mode="Plinko">Plinko</button></li>
+                <li><button class="game-mode" data-mode="Towers">Towers</button></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Mines Game Section -->
+    <div id="minesGame" class="game-container" style="display: none;">
+        <h2>Mines Game</h2>
+        <div id="minesGrid" class="grid-container"></div>
+        <div id="minesResult"></div>
+        <button id="restartMines" class="game-btn">Restart</button>
+    </div>
+
+    <!-- Plinko Game Section -->
+    <div id="plinkoGame" class="game-container" style="display: none;">
+        <h2>Plinko Game</h2>
+        <div id="plinkoBoard" class="plinko-board"></div>
+        <button id="plinkoStartBtn" class="game-btn">Start Plinko</button>
+        <div id="plinkoResult"></div>
+        <button id="restartPlinko" class="game-btn">Restart</button>
+    </div>
+
+    <!-- Towers Game Section -->
+    <div id="towersGame" class="game-container" style="display: none;">
+        <h2>Towers Game</h2>
+        <div id="towersProgress" class="towers-progress"></div>
+        <button id="towersStartBtn" class="game-btn">Start Tower</button>
+        <div id="towersResult"></div>
+        <button id="restartTowers" class="game-btn">Restart</button>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 MinesBet - Fuck you</p>
+    </footer>
+</body>
+</html>
+
+
