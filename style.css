@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("https://www.shutterstock.com/image-illustration/casino-mix-slot-machine-roulette-600nw-2452302931.jpg");
+    background-size: cover;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0 20px #00ff88;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.wallet {
+    font-size: 20px;
+}
+
+.profile button {
+    background: #00ff88;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.games {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.games div:hover {
+    box-shadow: 0 0 20px #00ff88;
+}
+
