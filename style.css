@@ -1,0 +1,200 @@
+/* General body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1c1c1c;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #2e3a45, #1a222e);
+    padding: 20px 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+header .logo h1 {
+    font-size: 2.2em;
+    color: #fff;
+}
+
+header .logo .mines {
+    color: #fff;
+}
+
+header .logo .bet {
+    color: #00e600;
+}
+
+button {
+    padding: 12px 24px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #333;
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    max-width: 80%;
+    text-align: center;
+}
+
+.modal-content h2 {
+    font-size: 2em;
+    color: #fff;
+}
+
+/* Game Grid Styling */
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns */
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.game-tile {
+    width: 80px;
+    height: 80px;
+    background-color: #444;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.game-tile:hover {
+    background-color: #555;
+    transform: scale(1.1);
+}
+
+.game-tile img {
+    width: 60px;
+    height: 60px;
+}
+
+/* Wallet and Account Section */
+#wallet {
+    padding: 30px;
+    text-align: center;
+    background: linear-gradient(135deg, #00b5ad, #009b92);
+    margin: 40px 20px;
+    border-radius: 10px;
+}
+
+#walletBalance {
+    font-size: 1.8em;
+}
+
+#walletButton {
+    margin-top: 20px;
+    background-color: #00e600;
+}
+
+/* Live Chat Styling */
+#liveChat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    border-radius: 10px;
+    width: 250px;
+    height: 300px;
+    overflow-y: scroll;
+}
+
+#chatMessages {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#chatMessages li {
+    background-color: #333;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #fff;
+}
+
+/* Money Rain Styling */
+#moneyRain {
+    position: fixed;
+    top: 10%;
+    right: 20px;
+    background-color: #ffcc00;
+    color: #000;
+    font-size: 1.5em;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 1em;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .game-grid {
+        grid-template-columns: repeat(3, 1fr); /* Reduce columns on mobile */
+    }
+
+    #walletBalance {
+        font-size: 1.5em;
+    }
+
+    #liveChat {
+        width: 200px;
+    }
+
+    footer p {
+        font-size: 0.9em;
+    }
+}
+
+
