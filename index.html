@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MinesBet - Play Games and Win Robux</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="minebet.png" alt="MinesBet Logo">
+        </div>
+        <div class="header-center">
+            <span class="wallet-balance">Robux: 1000</span>
+        </div>
+        <div class="header-right">
+            <button class="wallet-btn">Wallet</button>
+            <button class="profile-btn">Profile</button>
+            <button class="settings-btn">Settings</button>
+        </div>
+    </header>
+
+    <!-- Game Modes Modal -->
+    <div id="gameModesModal" class="game-modes-modal">
+        <div class="game-modes-modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <h2>Select Game Mode</h2>
+            <button class="game-mode" data-mode="Mines">
+                <img src="Minegamemode.png" alt="Mines Game"> Mines
+            </button>
+            <button class="game-mode" data-mode="Plinko">
+                <img src="Plinkogamemode.png" alt="Plinko Game"> Plinko
+            </button>
+            <button class="game-mode" data-mode="Towers">
+                <img src="Towergamemode.png" alt="Towers Game"> Towers
+            </button>
+        </div>
+    </div>
+
+    <!-- Game Sections (Placeholders for actual game logic) -->
+    <section id="minesGame" class="game-section">
+        <h3>Mines Game</h3>
+        <div id="minesGrid" class="grid"></div>
+        <button id="restartMines">Restart Mines</button>
+    </section>
+
+    <section id="plinkoGame" class="game-section">
+        <h3>Plinko Game</h3>
+        <div id="plinkoBoard" class="plinko-board"></div>
+        <button id="plinkoStartBtn">Start Plinko</button>
+        <div id="plinkoResult"></div>
+        <button id="restartPlinko">Restart Plinko</button>
+    </section>
+
+    <section id="towersGame" class="game-section">
+        <h3>Towers Game</h3>
+        <div id="towersProgress" class="progress-bar"></div>
+        <button id="towersStartBtn">Start Towers</button>
+        <div id="towersResult"></div>
+        <button id="restartTowers">Restart Towers</button>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+
